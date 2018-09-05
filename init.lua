@@ -2,8 +2,8 @@
 --manifest: connectIP.lua, ide.lua
 -- todo: convert timers to locally defined (general timers deprecated)
  -- Constants
-SSID    = "98FM"
-APPWD   = "potentiometer"
+SSID    = "SSID"
+APPWD   = "password"
 -- Some control variables
 wifiTrys     = 0      -- Counter of trys to connect to wifi
 NUMWIFITRYS  = 200    -- Maximum number of WIFI Testings while waiting for connection
