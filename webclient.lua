@@ -22,13 +22,14 @@ sk:on("connection", function(sck)
     print ("Sending: "..REQUEST.."...\r\n");
     conn:send(REQUEST)
     end)
-    sk:on("sent",function(sck)
-      tmr.alarm( 6, 10000, 0, function()
+sk:on("sent",function(sck)
+      endTimer:alarm(10000,tmr.ALARM_SINGLE,function()
       print("Closing connection")
       sk:close()
-      end)    
+      end)     
     end)
 sk:connect(80,serverParm["IP"])
 end
 --  START HERE - just init (all funtions called via console)
 serverParm={} -- connection params  for REMOTE server
+endTimer=tmr.create()  -- // start timer
