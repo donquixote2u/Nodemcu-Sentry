@@ -1,4 +1,2 @@
 # Nodemcu-Sentry
-NB  AT THIS TIME (7/12/17) THIS IS INCOMPLETE WIP CODE
-Nodemcu lua sentry with audible and web alerts on triggering a physical switch via ESP8266 GPIO interrupt pin
-Has OTA  module  (see ide.lua for credits)
+ds18b20 temperature sensor on Nodemcu lua pin 6 (ESP8266 GPIO12)
