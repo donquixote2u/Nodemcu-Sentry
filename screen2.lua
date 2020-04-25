@@ -23,22 +23,22 @@ function dprint(font_index,content)
 -- (tr=transparent) ncenB24_tr,ncenR12_tr,ncenR14_hr,7x13B_tr
    if      (font_index==2) then
     -- disp:setFont(u8g2.font_ncenB24_tr)
-    disp:setFont(u8g2.font_helvB10_tr)
+    disp:setFont(u8g2.font_helvB18_tr)
    else -- default 
     font_index=1  
-    disp:setFont(u8g2.font_7x13B_tr)
+    disp:setFont(u8g2.font_helvB10_tr)
    end
   -- disp:setPrintPos(Scrxpos,Scrypos)
   disp:drawStr(Scrxpos,Scrypos,content) -- disp:print(content)
   disp:sendBuffer()  -- display it!
   Scrxpos=Scrxpos+(string.len(content)*((font_index+1)*6))
-  if(Scrxpos>128) then Scrxpos=10 end
+  if(Scrxpos>128) then Scrxpos=2 end
 end
 --    ==================================================
 function dprintl(font_index,content)
 dprint(font_index,content)
 local spacer=(6*(font_index+2))+10 -- calc y spacing to next line
 Scrypos=Scrypos+spacer
-Scrxpos=10
-if(Scrypos>64) then Scrypos=10 end
+Scrxpos=2
+if(Scrypos>64) then Scrypos=2 end
 end
