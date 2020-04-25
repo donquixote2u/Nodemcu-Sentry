@@ -1,5 +1,4 @@
 function wifi_send()
-DATA["field3"]=t.readNumber(6) -- read io12 but first always rubbish
 DATA["field3"]=t.readNumber(6) -- read io12 again
 print("the temperature is  "..DATA["field3"])
 t = nil 
@@ -14,3 +13,4 @@ initTimeout=INTERVAL       -- // timer in ms
 initTimer:alarm(initTimeout,tmr.ALARM_SINGLE,function() checkConnection(wifi_send) end) 
 t=require("ds18b20") 
 dofile("TSClient.lua")
+DATA["field3"]=t.readNumber(6) -- read io12 but first always rubbish
