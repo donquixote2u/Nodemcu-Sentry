@@ -1,3 +1,4 @@
+--NOT USED IN NORMAL MANIFEST
 function init_test()
 init_display() -- set up display screen ready to show data
 initTimeout=1000

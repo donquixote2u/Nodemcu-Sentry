@@ -32,7 +32,9 @@ function dprint(font_index,content)
   disp:drawStr(Scrxpos,Scrypos,content) -- disp:print(content)
   disp:sendBuffer()  -- display it!
   Scrxpos=Scrxpos+(string.len(content)*((font_index+1)*6))
-  if(Scrxpos>128) then Scrxpos=2 end
+  if(Scrxpos>128) then
+   Scrxpos=2 
+  end
 end
 --    ==================================================
 function dprintl(font_index,content)
